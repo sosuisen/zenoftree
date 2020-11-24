@@ -105,6 +105,7 @@ const initDb = async (): Promise<RxDatabase> => {
   await Promise.all(collections.map(colData => db.collection(colData)));
 
   // hooks
+  /*
   console.log('DatabaseService: add hooks');
   db.collections.todoitems.$.subscribe(changeEvent => {
     // insert, update, delete
@@ -116,7 +117,9 @@ const initDb = async (): Promise<RxDatabase> => {
       mainWindow.webContents.send('persistent-store-deleted', changeEvent.documentData.id);
     }
   });
+  */
 
+  /*
   if (syncType === 'couchDB') {
     // sync
     console.log('DatabaseService: sync');
@@ -165,6 +168,7 @@ const initDb = async (): Promise<RxDatabase> => {
       live: true, // if this is true, rxdb will watch for ongoing changes and sync them
     });
   }
+  */
 
   return db;
 };
