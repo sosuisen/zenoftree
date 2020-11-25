@@ -32,7 +32,12 @@ module.exports = merge(common, {
                 // 3) .jsx => .js
                 'transform-react-jsx',
                 // 2) styleName in .jsx => className in .jsx
-                ['react-css-modules', { generateScopedName: cssModulesScopedName }],
+                [
+                  'react-css-modules',
+                  {
+                    generateScopedName: cssModulesScopedName,
+                  },
+                ],
               ],
             },
           },

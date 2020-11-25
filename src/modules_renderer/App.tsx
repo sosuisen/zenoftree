@@ -1,13 +1,13 @@
 import * as React from 'react';
 import './App.css';
 import { StoreProvider } from './StoreProvider';
-import { TodoList } from './TodoList';
+import { AvatarGraph } from './AvatarGraph';
 
 export const App = () => {
   return (
-    <div styleName='app'>
+    <div styleName='zenoftree'>
       <StoreProvider>
-        <TodoList></TodoList>
+        <AvatarGraph />
       </StoreProvider>
     </div>
   );
