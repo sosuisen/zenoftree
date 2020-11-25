@@ -10,6 +10,7 @@ export interface AppProps {
 
 type Avatar = {
   title: string;
+  subtitle?: string;
   children?: Avatar[];
 };
 type LocalState = {
@@ -18,8 +19,33 @@ type LocalState = {
 
 const initialState: LocalState = {
   treeData: [
-    { title: 'Chicken', children: [{ title: 'Egg' }] },
-    { title: 'Fish', children: [{ title: 'fingerline' }] },
+    {
+      title:
+        'Ordered tree を React で描画する場合、スタックに注意する必要があるはず。調査すること。',
+      subtitle: 'ToDo[1]',
+      children: [
+        {
+          title: '参考',
+          children: [
+            {
+              title: 'React Sortable Tree',
+              children: [
+                { title: 'https://github.com/frontend-collective/react-sortable-tree' },
+                { title: '全体をドラッグできるようにしたもの' },
+              ],
+            },
+          ],
+        },
+      ],
+    },
+    {
+      title: 'React Sortable Tree を使ってみて、データ構造と描画方法を確認する',
+      children: [
+        {
+          title: 'データ構造',
+        },
+      ],
+    },
   ],
 };
 
