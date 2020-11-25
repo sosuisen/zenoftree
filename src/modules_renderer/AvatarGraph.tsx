@@ -77,13 +77,22 @@ export const AvatarGraph = () => {
     return <Avatar />;
   });
   const [state, setState] = React.useState(initialState);
+  const [state2, setState2] = React.useState(initialState);
+
+  // Use same dndType for dragging and drop among SortableTrees
   return (
     <div style={{ height: 400 }}>
       Avatar Graph
       <br />
       <SortableTree
+        dndType='avatargraph'
         treeData={state.treeData}
         onChange={(treeData: Avatar[]) => setState({ treeData })}
+      ></SortableTree>
+      <SortableTree
+        dndType='avatargraph'
+        treeData={state2.treeData}
+        onChange={(treeData: Avatar[]) => setState2({ treeData })}
       ></SortableTree>
     </div>
   );
